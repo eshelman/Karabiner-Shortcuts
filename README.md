@@ -45,6 +45,14 @@ One-key git commands in iTerm2. F3 types the command (without pressing Enter) so
 | F3 | Types `git diff` (no Enter — you can name specific files or just hit Enter when ready) |
 | F4 | Types `git status` and presses Enter |
 
+### `capslock_app_switcher.json` — Caps Lock as app switcher
+
+Turns Caps Lock into a one-key `Cmd+Tab`. Works globally across all apps.
+
+| Key | Action |
+|-----|--------|
+| Caps Lock | Open macOS app switcher (`Cmd+Tab`) |
+
 ### `chrome_tab_switching.json` — Chrome tab switching via F7/F9
 
 Remaps F7/F9 to switch Chrome tabs, keeping the same "previous/next" muscle memory as the Screen navigation above.
@@ -59,4 +67,5 @@ Remaps F7/F9 to switch Chrome tabs, keeping the same "previous/next" muscle memo
 - All iTerm2 rules are scoped with `frontmost_application_if` so they only fire when iTerm2 is the active app.
 - The Chrome rule similarly only fires when Chrome is in front.
 - The Kinesis rule adds a `device_if` condition so it won't affect your laptop keyboard or other external keyboards.
+- The Caps Lock rule is global and fully replaces the Caps Lock toggle. If you still need Caps Lock occasionally, consider adding a Shift+Caps Lock escape hatch.
 - If you use both the media-key and Kinesis rules, Karabiner applies whichever matches first based on rule order and conditions.

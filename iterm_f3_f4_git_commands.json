@@ -1,0 +1,53 @@
+{
+  "title": "iTerm2: F3/F4 type git diff/status",
+  "rules": [
+    {
+      "description": "When iTerm2 is frontmost: F3 types 'git diff'; F4 types 'git status' + Enter",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": { "key_code": "f3", "modifiers": { "optional": ["any"] } },
+          "to": [
+            { "key_code": "g" },
+            { "key_code": "i" },
+            { "key_code": "t" },
+            { "key_code": "spacebar" },
+            { "key_code": "d" },
+            { "key_code": "i" },
+            { "key_code": "f" },
+            { "key_code": "f", "repeat": false }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": ["^com\\.googlecode\\.iterm2$"]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "f4", "modifiers": { "optional": ["any"] } },
+          "to": [
+            { "key_code": "g" },
+            { "key_code": "i" },
+            { "key_code": "t" },
+            { "key_code": "spacebar" },
+            { "key_code": "s" },
+            { "key_code": "t" },
+            { "key_code": "a" },
+            { "key_code": "t" },
+            { "key_code": "u" },
+            { "key_code": "s" },
+            { "key_code": "return_or_enter", "repeat": false }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": ["^com\\.googlecode\\.iterm2$"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

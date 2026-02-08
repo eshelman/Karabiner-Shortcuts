@@ -1,0 +1,36 @@
+{
+  "title": "Google Chrome: F7/F9 switch tabs (Cmd+Opt+Arrow)",
+  "rules": [
+    {
+      "description": "When Google Chrome is frontmost: F7 -> previous tab (⌘⌥←), F9 -> next tab (⌘⌥→)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": { "key_code": "f7", "modifiers": { "optional": ["any"] } },
+          "to": [
+            { "key_code": "left_arrow", "modifiers": ["command", "option"], "repeat": false }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": ["^com\\.google\\.Chrome$"]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "f9", "modifiers": { "optional": ["any"] } },
+          "to": [
+            { "key_code": "right_arrow", "modifiers": ["command", "option"], "repeat": false }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": ["^com\\.google\\.Chrome$"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

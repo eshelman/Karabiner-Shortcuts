@@ -1,0 +1,43 @@
+{
+  "title": "iTerm2: media prev/next -> Ctrl+a p/n",
+  "rules": [
+    {
+      "description": "When iTerm2 is focused: Prev Track -> Ctrl+a then p; Next Track -> Ctrl+a then n",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": { "key_code": "f7", "modifiers": { "optional": ["any"] } },
+          "to": [
+            { "key_code": "a", "modifiers": ["control"] },
+            { "key_code": "p", "repeat": false }
+          ],
+          "conditions": [
+            { "type": "frontmost_application_if", "bundle_identifiers": ["^com\\.googlecode\\.iterm2$"] }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "f9", "modifiers": { "optional": ["any"] } },
+          "to": [
+            { "key_code": "a", "modifiers": ["control"] },
+            { "key_code": "n", "repeat": false }
+          ],
+          "conditions": [
+            { "type": "frontmost_application_if", "bundle_identifiers": ["^com\\.googlecode\\.iterm2$"] }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "f8", "modifiers": { "optional": ["any"] } },
+          "to": [
+            { "key_code": "a", "modifiers": ["control"] },
+            { "key_code": "open_bracket", "repeat": false }
+          ],
+          "conditions": [
+            { "type": "frontmost_application_if", "bundle_identifiers": ["^com\\.googlecode\\.iterm2$"] }
+          ]
+        }
+      ]
+    }
+  ]
+}

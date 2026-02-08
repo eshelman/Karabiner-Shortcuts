@@ -1,0 +1,70 @@
+{
+  "title": "Kinesis Advantage2 + iTerm2: F10/F11/F12 -> Ctrl+a p/[ /n",
+  "rules": [
+    {
+      "description": "Only on Kinesis Advantage2 (vendor 10730, product 258) AND only when iTerm2 is frontmost: F10->Ctrl+a p, F11->Ctrl+a [, F12->Ctrl+a n",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": { "key_code": "f10", "modifiers": { "optional": ["any"] } },
+          "to": [
+            { "key_code": "a", "modifiers": ["control"] },
+            { "key_code": "p", "repeat": false }
+          ],
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                { "vendor_id": 10730, "product_id": 258, "is_keyboard": true }
+              ]
+            },
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": ["^com\\.googlecode\\.iterm2$"]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "f11", "modifiers": { "optional": ["any"] } },
+          "to": [
+            { "key_code": "a", "modifiers": ["control"] },
+            { "key_code": "open_bracket", "repeat": false }
+          ],
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                { "vendor_id": 10730, "product_id": 258, "is_keyboard": true }
+              ]
+            },
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": ["^com\\.googlecode\\.iterm2$"]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "f12", "modifiers": { "optional": ["any"] } },
+          "to": [
+            { "key_code": "a", "modifiers": ["control"] },
+            { "key_code": "n", "repeat": false }
+          ],
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                { "vendor_id": 10730, "product_id": 258, "is_keyboard": true }
+              ]
+            },
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": ["^com\\.googlecode\\.iterm2$"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

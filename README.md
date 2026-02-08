@@ -42,7 +42,7 @@ One-key git commands in iTerm2. F3 types the command (without pressing Enter) so
 
 | Key | Action |
 |-----|--------|
-| F3 | Types `git diff` (no Enter — you hit Enter when ready) |
+| F3 | Types `git diff` (no Enter — you can name specific files or just hit Enter when ready) |
 | F4 | Types `git status` and presses Enter |
 
 ### `chrome_tab_switching.json` — Chrome tab switching via F7/F9
@@ -51,8 +51,8 @@ Remaps F7/F9 to switch Chrome tabs, keeping the same "previous/next" muscle memo
 
 | Key | Action | Chrome Shortcut |
 |-----|--------|-----------------|
-| F7 | Previous tab | `Cmd+Opt+Left` |
-| F9 | Next tab | `Cmd+Opt+Right` |
+| F7 (Prev Track) | Previous tab | `Cmd+Opt+Left` |
+| F9 (Next Track) | Next tab | `Cmd+Opt+Right` |
 
 ## Notes
 
